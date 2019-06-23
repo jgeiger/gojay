@@ -85,7 +85,7 @@ with Decode:
 func main() {
     u := &user{}
     dec := gojay.NewDecoder(bytes.NewReader([]byte(`{"id":1,"name":"gojay","email":"gojay@email.com"}`)))
-    err := dec.DecodeObject(d, u)
+    err := dec.DecodeObject(dec, u)
     if err != nil {
         log.Fatal(err)
     }
